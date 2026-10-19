@@ -3,7 +3,8 @@
 Fork von dozingcat/Vector-Pinball (Android, Java, GPL 3). Auf dem Zweig `vectrex-port` entsteht in `vectrex/`
 die Fassung fuer Vectrex + UVMC2 (Ultimate Vectrex Multicart 2, RP2350). Der Java-Code unter `app/` bleibt
 unveraendert: er ist die Referenz und die Quelle der Tischdaten.
-Sprache fuer Kommentare, Doku und Commits: Deutsch. Sichtbare Texte im Spiel: Englisch (wie im Original).
+Sprache fuer Kommentare und Doku: Deutsch. Alles auf GitHub (Commits, Releases, PRs, Tags): Englisch.
+Sichtbare Texte im Spiel: Englisch (wie im Original).
 
 Architektur, Stand, Befunde: `vectrex/docs/ARCHITECTURE.md`. Werkzeuge und Bauen: `vectrex/docs/SETUP.md`.
 Schwesterprojekt mit derselben Werkzeugkette und vielen Hardware-Erfahrungen: `F:\DraculaVectrexPort`
