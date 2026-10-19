@@ -1,0 +1,14 @@
+# Build
+build/
+build_uvm2/
+*.exe
+*.o
+*.log
+*.bmp
+*.ppm
+# Einstellungen des Simulators
+pinball/
+# Starter Kit wird separat geklont (siehe docs/SETUP.md)
+uvmc2-starter-kit/
+shots/
+sdcard/

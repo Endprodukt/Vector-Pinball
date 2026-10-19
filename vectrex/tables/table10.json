@@ -1,0 +1,1108 @@
+{
+ "name": "Spinball",
+ "delegate": "Field10Delegate",
+ "version": 2,
+ "width": 20,
+ "height": 25.51,
+ "gravity": 4,
+ "targetTimeRatio": 2.3,
+ "numballs": 5,
+ "ballradius": 0.36,
+ "ballcolor": [
+  192,
+  192,
+  224
+ ],
+ "launchPosition": [
+  19.375,
+  3.75
+ ],
+ "launchVelocity": [
+  0,
+  15.5
+ ],
+ "launchVelocityRandomDelta": [
+  0,
+  0.6
+ ],
+ "launchDeadZone": [
+  18.75,
+  3.021,
+  20.0,
+  4.375
+ ],
+ "elements": [
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     11.667,
+     22.083
+    ],
+    [
+     11.667,
+     22.917
+    ],
+    [
+     16.667,
+     23.75
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     18.75,
+     22.083
+    ],
+    [
+     18.75,
+     10.625
+    ],
+    [
+     18.75,
+     3.125
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     14.167,
+     3.125
+    ],
+    [
+     16.25,
+     3.958
+    ],
+    [
+     16.25,
+     7.083
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     17.5,
+     7.083
+    ],
+    [
+     17.5,
+     3.125
+    ],
+    [
+     12.083,
+     1.146
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     6.667,
+     1.146
+    ],
+    [
+     1.25,
+     3.125
+    ],
+    [
+     1.25,
+     7.083
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     4.375,
+     3.125
+    ],
+    [
+     2.5,
+     3.958
+    ],
+    [
+     2.5,
+     7.083
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     14.792,
+     12.292
+    ],
+    [
+     16.458,
+     12.917
+    ],
+    [
+     17.5,
+     15.0
+    ],
+    [
+     17.5,
+     12.917
+    ],
+    [
+     15.833,
+     11.042
+    ],
+    [
+     13.333,
+     11.25
+    ],
+    [
+     15.0,
+     11.875
+    ],
+    [
+     14.792,
+     12.292
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     18.75,
+     12.188
+    ],
+    [
+     17.5,
+     10.625
+    ],
+    [
+     18.75,
+     9.062
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     11.875,
+     12.917
+    ],
+    [
+     11.042,
+     14.792
+    ],
+    [
+     5.625,
+     13.333
+    ],
+    [
+     5.208,
+     12.083
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     0.0,
+     13.854
+    ],
+    [
+     1.25,
+     12.917
+    ],
+    [
+     1.042,
+     12.5
+    ],
+    [
+     2.708,
+     11.667
+    ],
+    [
+     0.0,
+     8.646
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     11.875,
+     12.917
+    ],
+    [
+     10.625,
+     13.542
+    ],
+    [
+     9.167,
+     13.75
+    ],
+    [
+     7.708,
+     13.542
+    ],
+    [
+     6.25,
+     12.917
+    ],
+    [
+     5.208,
+     12.083
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     6.667,
+     22.083
+    ],
+    [
+     6.667,
+     22.917
+    ],
+    [
+     3.333,
+     23.75
+    ],
+    [
+     1.562,
+     22.292
+    ],
+    [
+     2.5,
+     21.146
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     8.333,
+     22.083
+    ],
+    [
+     8.125,
+     22.708
+    ],
+    [
+     8.333,
+     22.917
+    ],
+    [
+     8.542,
+     22.708
+    ],
+    [
+     8.333,
+     22.083
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     10.0,
+     22.083
+    ],
+    [
+     9.792,
+     22.708
+    ],
+    [
+     10.0,
+     22.917
+    ],
+    [
+     10.208,
+     22.708
+    ],
+    [
+     10.0,
+     22.083
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     0.0,
+     3.125
+    ],
+    [
+     0.0,
+     12.083
+    ],
+    [
+     0.0,
+     22.083
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     0.0,
+     19.479
+    ],
+    [
+     1.042,
+     20.417
+    ],
+    [
+     0.0,
+     21.979
+    ],
+    [
+     0.417,
+     23.75
+    ],
+    [
+     1.667,
+     25.0
+    ],
+    [
+     3.229,
+     25.312
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     3.229,
+     25.312
+    ],
+    [
+     10.0,
+     25.208
+    ],
+    [
+     16.667,
+     25.208
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     16.667,
+     25.208
+    ],
+    [
+     19.167,
+     24.167
+    ],
+    [
+     20.0,
+     22.083
+    ]
+   ]
+  },
+  {
+   "class": "WallPathElement",
+   "positions": [
+    [
+     20.0,
+     22.083
+    ],
+    [
+     20.0,
+     10.625
+    ],
+    [
+     20.0,
+     3.125
+    ]
+   ]
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    16.667,
+    23.75,
+    18.125,
+    22.917
+   ],
+   "id": "LaunchBarrier1",
+   "disabled": true,
+   "color": [
+    128,
+    128,
+    128
+   ]
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    18.125,
+    22.917,
+    18.75,
+    22.083
+   ],
+   "id": "LaunchBarrier2",
+   "disabled": true,
+   "color": [
+    128,
+    128,
+    128
+   ]
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    16.667,
+    25.208,
+    16.667,
+    23.75
+   ],
+   "id": "LaunchBarrier3",
+   "disabled": true,
+   "color": [
+    128,
+    128,
+    128
+   ]
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    8.542,
+    1.458,
+    9.375,
+    2.292
+   ],
+   "id": "CenterPost1",
+   "disabled": true,
+   "kick": 2.5,
+   "color": [
+    255,
+    221,
+    0
+   ]
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    9.375,
+    2.292,
+    10.208,
+    1.458
+   ],
+   "id": "CenterPost2",
+   "disabled": true,
+   "kick": 2.5,
+   "color": [
+    255,
+    221,
+    0
+   ]
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    10.208,
+    1.458,
+    8.542,
+    1.458
+   ],
+   "id": "CenterPost3",
+   "disabled": true,
+   "kick": 2.5,
+   "color": [
+    255,
+    221,
+    0
+   ]
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    1.25,
+    3.125,
+    0.0,
+    3.125
+   ],
+   "id": "BallSaver-left",
+   "kick": 6.0,
+   "retractWhenHit": true,
+   "disabled": true,
+   "color": [
+    0,
+    255,
+    0
+   ]
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    18.75,
+    3.125,
+    17.5,
+    3.125
+   ],
+   "id": "BallSaver-right",
+   "kick": 6.0,
+   "retractWhenHit": true,
+   "disabled": true,
+   "color": [
+    0,
+    255,
+    0
+   ]
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    2.5,
+    7.083,
+    4.375,
+    3.125
+   ],
+   "kick": 3.5,
+   "color": [
+    0,
+    0,
+    255
+   ]
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    16.25,
+    7.083,
+    14.167,
+    3.125
+   ],
+   "kick": 3.5,
+   "color": [
+    0,
+    0,
+    255
+   ]
+  },
+  {
+   "class": "BumperElement",
+   "id": "Bumper1",
+   "position": [
+    7.292,
+    19.688
+   ],
+   "radius": 0.7,
+   "sides": 6,
+   "kick": 3.0,
+   "color": [
+    0,
+    153,
+    255
+   ]
+  },
+  {
+   "class": "BumperElement",
+   "id": "Bumper2",
+   "position": [
+    10.0,
+    20.312
+   ],
+   "radius": 0.7,
+   "sides": 6,
+   "kick": 3.0,
+   "color": [
+    0,
+    153,
+    255
+   ]
+  },
+  {
+   "class": "BumperElement",
+   "id": "Bumper3",
+   "position": [
+    8.542,
+    17.188
+   ],
+   "radius": 0.7,
+   "sides": 6,
+   "kick": 3.0,
+   "color": [
+    0,
+    153,
+    255
+   ]
+  },
+  {
+   "class": "BumperElement",
+   "id": "Bumper4",
+   "position": [
+    11.042,
+    17.812
+   ],
+   "radius": 0.7,
+   "sides": 6,
+   "kick": 3.0,
+   "color": [
+    0,
+    153,
+    255
+   ]
+  },
+  {
+   "class": "RolloverGroupElement",
+   "id": "BumperLights",
+   "ignoreBall": true,
+   "radius": 0.26,
+   "color": [
+    255,
+    255,
+    255
+   ],
+   "rollovers": [
+    {
+     "position": [
+      7.292,
+      19.688
+     ]
+    },
+    {
+     "position": [
+      10.0,
+      20.312
+     ]
+    },
+    {
+     "position": [
+      8.542,
+      17.188
+     ]
+    },
+    {
+     "position": [
+      11.042,
+      17.812
+     ]
+    }
+   ]
+  },
+  {
+   "class": "RolloverGroupElement",
+   "id": "Chutes",
+   "radius": 0.4,
+   "color": [
+    0,
+    224,
+    224
+   ],
+   "ignoreBall": true,
+   "rollovers": [
+    {
+     "position": [
+      7.5,
+      22.5
+     ]
+    },
+    {
+     "position": [
+      9.167,
+      22.5
+     ]
+    },
+    {
+     "position": [
+      10.833,
+      22.5
+     ]
+    }
+   ]
+  },
+  {
+   "class": "RolloverGroupElement",
+   "id": "Splitter",
+   "radius": 0.6,
+   "color": [
+    255,
+    221,
+    0
+   ],
+   "ignoreBall": true,
+   "rollovers": [
+    {
+     "position": [
+      9.375,
+      11.042
+     ]
+    }
+   ]
+  },
+  {
+   "class": "SpinnerElement",
+   "id": "Spinner1",
+   "position": [
+    1.208,
+    21.344
+   ],
+   "radius": 0.385,
+   "barAngle": 33.7,
+   "color": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "class": "SpinnerElement",
+   "id": "Spinner2",
+   "position": [
+    1.875,
+    5.323
+   ],
+   "radius": 0.427,
+   "barAngle": 0.0,
+   "color": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "class": "SpinnerElement",
+   "id": "Spinner3",
+   "position": [
+    16.875,
+    5.323
+   ],
+   "radius": 0.427,
+   "barAngle": 0.0,
+   "color": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "class": "SpinnerElement",
+   "id": "Spinner4",
+   "position": [
+    17.083,
+    11.438
+   ],
+   "radius": 0.302,
+   "barAngle": -45.0,
+   "color": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "class": "DropTargetGroupElement",
+   "id": "DropLowRight",
+   "color": [
+    0,
+    255,
+    0
+   ],
+   "reset": 3.0,
+   "positions": [
+    [
+     17.268,
+     10.066,
+     17.747,
+     9.489
+    ],
+    [
+     17.883,
+     9.326,
+     18.362,
+     8.749
+    ]
+   ]
+  },
+  {
+   "class": "DropTargetGroupElement",
+   "id": "DropTopRight",
+   "color": [
+    0,
+    255,
+    0
+   ],
+   "reset": 3.0,
+   "positions": [
+    [
+     11.938,
+     22.564,
+     12.754,
+     22.685
+    ],
+    [
+     12.985,
+     22.719,
+     13.801,
+     22.839
+    ],
+    [
+     14.032,
+     22.873,
+     14.848,
+     22.993
+    ],
+    [
+     15.079,
+     23.027,
+     15.895,
+     23.147
+    ],
+    [
+     16.125,
+     23.181,
+     16.942,
+     23.301
+    ]
+   ]
+  },
+  {
+   "class": "DropTargetGroupElement",
+   "id": "DropTopLeft",
+   "color": [
+    0,
+    255,
+    0
+   ],
+   "reset": 3.0,
+   "positions": [
+    [
+     6.047,
+     22.635,
+     5.186,
+     22.83
+    ],
+    [
+     4.943,
+     22.885,
+     4.082,
+     23.08
+    ],
+    [
+     3.839,
+     23.135,
+     2.978,
+     23.33
+    ]
+   ]
+  },
+  {
+   "class": "DropTargetGroupElement",
+   "id": "DropMidLeft",
+   "color": [
+    0,
+    255,
+    0
+   ],
+   "reset": 3.0,
+   "positions": [
+    [
+     3.123,
+     11.399,
+     2.595,
+     10.822
+    ],
+    [
+     2.446,
+     10.66,
+     1.918,
+     10.083
+    ],
+    [
+     1.769,
+     9.92,
+     1.241,
+     9.343
+    ],
+    [
+     1.092,
+     9.18,
+     0.564,
+     8.604
+    ]
+   ]
+  },
+  {
+   "class": "DropTargetGroupElement",
+   "id": "DropMidRight",
+   "color": [
+    0,
+    255,
+    0
+   ],
+   "reset": 3.0,
+   "positions": [
+    [
+     13.786,
+     10.938,
+     14.647,
+     10.84
+    ],
+    [
+     14.89,
+     10.813,
+     15.752,
+     10.715
+    ]
+   ]
+  },
+  {
+   "class": "FlipperElement",
+   "position": [
+    6.25,
+    1.042
+   ],
+   "length": 1.746,
+   "minangle": -17.4,
+   "maxangle": 48.1,
+   "upspeed": 7,
+   "downspeed": 3
+  },
+  {
+   "class": "FlipperElement",
+   "position": [
+    1.146,
+    12.708
+   ],
+   "length": 1.912,
+   "minangle": -29.4,
+   "maxangle": 34.9,
+   "upspeed": 7,
+   "downspeed": 3
+  },
+  {
+   "class": "FlipperElement",
+   "position": [
+    12.5,
+    1.042
+   ],
+   "length": -1.746,
+   "minangle": -17.4,
+   "maxangle": 48.1,
+   "upspeed": 7,
+   "downspeed": 3
+  },
+  {
+   "class": "FlipperElement",
+   "position": [
+    14.896,
+    12.083
+   ],
+   "length": -1.819,
+   "minangle": -23.6,
+   "maxangle": 40.8,
+   "upspeed": 7,
+   "downspeed": 3
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    18.75,
+    3.125,
+    20.0,
+    3.125
+   ]
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    -0.417,
+    0.208,
+    20.417,
+    0.208
+   ],
+   "kill": true,
+   "color": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    -0.417,
+    3.125,
+    -0.417,
+    0.208
+   ],
+   "kill": true,
+   "color": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    20.417,
+    2.708,
+    20.417,
+    0.208
+   ],
+   "kill": true,
+   "color": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "class": "WallElement",
+   "position": [
+    18.75,
+    2.708,
+    20.417,
+    2.708
+   ],
+   "kill": true,
+   "color": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "class": "SensorElement",
+   "id": "LaunchBarrierSensor",
+   "rect": [
+    3.75,
+    23.125,
+    14.167,
+    25.312
+   ]
+  },
+  {
+   "class": "SensorElement",
+   "id": "LaunchBarrierRetract",
+   "rect": [
+    18.75,
+    3.125,
+    20.0,
+    7.917
+   ]
+  }
+ ]
+}
