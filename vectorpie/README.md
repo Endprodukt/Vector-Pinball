@@ -1,13 +1,13 @@
-# Vector Pinball fuer VectorPie
+# Vector Pinball for VectorPie
 
-Die Vectrex-Fassung (`../vectrex`) auf [VectorPie](https://github.com/Goldfinch2/VectorPie): Raspberry Pi mit USB-DVG
-oder BeamForge an einem Farb-Vektormonitor, zum Entwickeln ein Fenster auf dem PC. Dasselbe Spiel - zehn Tische,
-Physik, 3D-Koerper mit Verdeckung, Zoom, Ton - in Farbe.
+The game of the Vectrex version (`../vectrex`) on [VectorPie](https://github.com/Goldfinch2/VectorPie): a Raspberry Pi
+with USB-DVG or BeamForge driving a color vector monitor, and a window on the PC for development. The same game - ten
+tables, physics, 3D bodies with occlusion, zoom, sound - in color.
 
-- Bauen und starten: [docs/SETUP.md](docs/SETUP.md)
-- Aufbau, Stand, offene Punkte: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+- Building and running: [docs/SETUP.md](docs/SETUP.md)
+- Architecture, status, open points: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 
-Spielkern und Ton kommen unveraendert aus `../vectrex`; hier liegen nur die Plattform und die Dateien, in denen Farbe,
-Bildformat und Steuerung stecken.
+The game core and the sound come unchanged from `../vectrex`; this folder holds only the platform and the files that
+carry color, picture format and controls.
 
-Lizenz: GPL 3 wie das Original (Brian Nenninger, dozingcat). Das VectorPie SDK steht unter MIT.
+License: GPL 3 like the original (Brian Nenninger, dozingcat). The VectorPie SDK is under the MIT license.
