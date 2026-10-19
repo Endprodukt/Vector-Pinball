@@ -1,0 +1,50 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": { "major": 3, "minor": 21, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "win",
+      "displayName": "Windows direkt: MSYS2 MINGW64 (gcc und SDL2 aus C:/msys64/mingw64)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/win",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_C_COMPILER": "C:/msys64/mingw64/bin/gcc.exe",
+        "CMAKE_CXX_COMPILER": "C:/msys64/mingw64/bin/g++.exe",
+        "CMAKE_PREFIX_PATH": "C:/msys64/mingw64"
+      },
+      "environment": { "PATH": "C:/msys64/mingw64/bin;$penv{PATH}" }
+    },
+    {
+      "name": "pi-clang",
+      "displayName": "Pi (arm64) auf dem PC: clang + lld gegen den Sysroot des Automaten",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/pi",
+      "toolchainFile": "${sourceDir}/cmake/toolchain-pi-clang.cmake",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" },
+      "environment": { "PATH": "C:/Users/ocare/.local/share/retcomm/toolchains/cmake-clang-v1/latest/bin;$penv{PATH}" }
+    },
+    {
+      "name": "pc",
+      "displayName": "WSL2 Debian: Windows .exe (MinGW-w64), wie das SDK",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/pc",
+      "toolchainFile": "${sourceDir}/sdk-repo/sdk/cmake/toolchain-mingw-w64.cmake",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Release", "SDL2_DIR": "/opt/sdl2-mingw/cmake" }
+    },
+    {
+      "name": "pi",
+      "displayName": "WSL2 Debian: Pi (Linux arm64, Debian trixie)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/pi",
+      "toolchainFile": "${sourceDir}/sdk-repo/sdk/cmake/toolchain-pi-arm64.cmake",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
+    }
+  ],
+  "buildPresets": [
+    { "name": "win", "configurePreset": "win" },
+    { "name": "pi-clang", "configurePreset": "pi-clang" },
+    { "name": "pc", "configurePreset": "pc" },
+    { "name": "pi", "configurePreset": "pi" }
+  ]
+}

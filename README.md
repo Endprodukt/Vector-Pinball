@@ -1,92 +1,90 @@
-# Vector Pinball for Vectrex
+# Vector Pinball for VectorPie
 
-A port of [Vector Pinball](https://github.com/dozingcat/Vector-Pinball/) by Brian Nenninger (dozingcat) to the
-**Vectrex** with the **Ultimate Vectrex Multicart 2** (UVMC2, RP2350). The original is an Android game drawn
-entirely with lines and circles; here it runs on the Vectrex's vector tube.
+A port of [Vector Pinball](https://github.com/dozingcat/Vector-Pinball/) by Brian Nenninger (dozingcat) to
+[VectorPie](https://github.com/Goldfinch2/VectorPie): a Raspberry Pi 5 with a USB-DVG (or BeamForge) driving a
+**color vector monitor** in an arcade cabinet, and a window on the PC for development. The original is an Android game
+drawn entirely with lines and circles; here it runs on a real vector monitor, in color.
 
-This branch (`vectrex-port`) adds the port in [`vectrex/`](vectrex/). The original Android code under `app/` is left
-unchanged: it is the reference and the source of the table data.
+This branch (`vectrex-port`) adds the port: [`vectorpie/`](vectorpie/) is the VectorPie version, and it shares its game
+core with [`vectrex/`](vectrex/) (the same game for the Vectrex with the UVMC2 multicart). The original Android code under
+`app/` is left unchanged: it is the reference and the source of the table data.
 
 ## What it is
 
 - **All nine tables of the original**, plus a tenth: the table of **Spinball** (GCE, 1983), with the playfield read
   from the cartridge ROM and the rules following its manual.
-- **The game core in C** (`vectrex/core/`): physics, table elements and the rules of every table, ported line by line
-  from the Java original. The same sources build the console image and a PC simulator.
-- **Physics**: Box2D is replaced by a small solver that reproduces the original's values (ball, walls, flippers with
-  motor and stops). Two modes:
-  - **ARCADE**: exactly like the original.
-  - **REALISTIC** (default): flippers modelled after Visual Pinball X (coil ramp-up, rubber, bounce at the stop),
-    so tip passes, post passes, dead bounces and live catches work; rubber that loses bounce at higher speed and a
-    little scatter on bumpers and kickers.
-  - **BALL SPEED** SLOW / MEDIUM (the original's pace) / FAST (default, like a real table's slope), and per table
-    **TABLE SLOPE** and **FLIPPER POWER**.
-- **3D bodies with occlusion**: walls, blocks, bumpers and flippers are drawn as solid bodies; what lies behind them
-  is hidden. Optional **ZOOM** that follows the ball.
-- **Nudging and TILT**: nudge the table left, right or up; two warnings, the third is a tilt, sensitivity adjustable.
-- **1 to 4 players** taking turns like on a real machine, **high score tables** per table with initials, saved on the
-  SD card.
-- **Sound**: effects on the Vectrex's own sound chip; through the UVMC2's audio jack the original's recordings and
-  music (WAV files on the SD card), plus your own music per table.
-- **Intro, 3D menu, pause page, screen adjustment** (size, position, brightness) on the console.
+- **The game core in C**: physics, table elements and the rules of every table, ported line by line from the Java
+  original (`vectrex/core/`, built unchanged here).
+- **Physics**: Box2D is replaced by a small solver that reproduces the original's values. **ARCADE** plays exactly like
+  the original; **REALISTIC** (default) models the flippers after Visual Pinball X (coil ramp-up, rubber, bounce at the
+  stop), so tip passes, post passes, dead bounces and live catches work. Ball speed and, per table, slope and flipper
+  power are adjustable.
+- **Color**: every element in the original's color from the table data, flashes in white; 3D bodies with occlusion
+  (walls, blocks, bumpers and flippers are solid, what lies behind them is hidden); a ball that really rolls, a glowing
+  trail, sparks and rising score values.
+- **Landscape cabinet screen**: the table fills the picture width and scrolls with the ball; START switches the view
+  (full width, closer, closest, whole table). `--vertical` for a monitor mounted upright.
+- **Arcade machine**: coins or free play, attract mode with title, demo game and high scores, a 14-segment display for
+  scores and messages, 1 to 4 players taking turns, initials, nudging with TILT.
+- **Service menu** (F2): game settings, volumes and **freely bindable controls**, independent of `advmame.rc`: keys,
+  joystick buttons, hats, axes and mouse buttons, several per function. Plunger digital (hold a button) or analog
+  (a yoke axis), nudging by buttons or by an axis.
+- **Sound**: the original's recordings and music, stereo by ball position; your own music per table can be added on
+  the cabinet.
+- **VectorPie menu**: installs as a package, with marquee and its high scores shown in the menu.
 
-## Installing on the console
+## Installing on the cabinet
 
-Download the files from the [releases](https://github.com/Endprodukt/Vector-Pinball/releases):
+Download `vpinball-<version>.vpk` from the [releases](https://github.com/Endprodukt/Vector-Pinball/releases) and copy it
+to a USB stick's `games/` folder or to `/persistent/games/packages/` on the cabinet. Then in the VectorPie menu:
+Settings -> GAMES -> INSTALL GAMES. Settings and high scores in `save/` are kept on an update.
 
-1. Copy `pinball.um2` onto the UVMC2's SD card.
-2. For the original sounds and music through the audio jack, unpack `pinball-sdcard.zip` onto the card, so that the
-   card holds `pinball/snd/*.wav` (13 files). Without them the game runs too, the jack then plays chip effects.
-   OPTIONS shows `JACK: 13/13 SOUND FILES` when they are loaded.
-3. Your own music: WAV files in `pinball/snd/` named `<n>_name.wav`, `0_` for the menu, `1_` to `10_` for the tables
-   (16 bit; best 32 kHz mono).
-
-The game writes `pinball/settings.bin` and `pinball/scores.bin` itself.
+Your own music (not in the package): WAV files named `<n>_name.wav` in `/persistent/games/vpinball/data/snd/`, `0_` for
+the title screen, `1_` to `10_` for the tables (16 kHz stereo, 16 bit is enough). The game looks for them at start-up.
 
 ## Controls
 
-| | Console | Simulator (PC) |
-|---|---|---|
-| Left flipper | button 1 | left Shift or Ctrl, Y/Z |
-| Right flipper | button 4 | right Shift or Ctrl, Minus, Enter |
-| Launch ball | button 3 or a flipper | Space, C |
-| Nudge the table | stick left / right / up | arrow left / right / up |
-| Pause | button 2 | P, X |
-| Menu: pick a line / change a value | stick | arrow keys |
-| Menu: OK / back | button 4 (or 3) / button 1 | Enter, Space / Backspace |
+Out of the box the keys and buttons AdvanceMAME gives these functions (flippers, plunger, nudges), plus coin, START
+(also OK) and F2. The ball is launched only with the plunger. F2 opens the service menu at any time; under CONTROLS pick a line, press START, then the
+key or button or move the axis you want. The bindings are kept in `save/settings.ini`. Everything else that can be set
+by hand is explained in [`vectorpie/game.ini`](vectorpie/game.ini).
 
 ## Building
 
-Windows with Git Bash, the [UVMC2 Starter Kit](https://github.com/tullulah/uvmc2-starter-kit) with pico-sdk 2.2.0, the
-Arm GNU Toolchain, CMake, Ninja, Python 3, Rust and MSYS2 (gcc + SDL2 for the simulator). In `vectrex/`:
+The VectorPie SDK is cloned next to the sources (not part of this repository):
 
 ```sh
-source tools/env.sh
-mingw32-make host < /dev/null     # simulator  -> build/pinball_host.exe
-mingw32-make test < /dev/null     # long run of the game core over all tables
-mingw32-make uvm2 < /dev/null     # console    -> build_uvm2/pinball.um2
-mingw32-make sounds < /dev/null   # SD card sounds -> sdcard/pinball/snd/
+cd vectorpie
+git clone https://github.com/Goldfinch2/VectorPie.git sdk-repo
 ```
 
-Details (setup, simulator options, analysis tools): [vectrex/docs/SETUP.md](vectrex/docs/SETUP.md).
-Architecture, physics, status and open points: [vectrex/docs/ARCHITECTURE.md](vectrex/docs/ARCHITECTURE.md).
+PC (Windows, MSYS2 MINGW64 with gcc and SDL2, CMake, Ninja):
 
-## Status
+```sh
+cmake --preset win && cmake --build --preset win
+build/win/pinball.exe --windowed
+```
 
-Everything is done and checked in the simulator: ten tables with their rules, both physics modes, zoom, nudging and
-tilt, 1-4 players, menu, high scores, screen adjustment, chip effects and the original sound with music. The game
-runs well on the console; frame rate per table, picture stability with ZOOM and the sound loading through the jack
-are still being checked there. Multiball sequences and rare table rules (jackpots, card hands, constellations) are
-ported from the Java code but not checked by the automatic long runs.
+Cabinet (arm64, cross-built on the PC with clang and lld against a copy of the cabinet's libraries), then the package:
+
+```sh
+cmake --preset pi-clang && cmake --build --preset pi-clang    # -> build/pi/pinball
+sh tools/make_vpk.sh                                         # -> build/vpinball-<version>.vpk
+```
+
+The sound recordings come from `vectrex/sdcard/pinball/snd` (`make sounds` in `vectrex/`). Details, the SDK's own Pi
+build in WSL and testing tools: [vectorpie/docs/SETUP.md](vectorpie/docs/SETUP.md). Architecture and status:
+[vectorpie/docs/ARCHITECTURE.md](vectorpie/docs/ARCHITECTURE.md).
 
 ## Credits and license
 
 - Original game: Brian Nenninger (dozingcat), [github.com/dozingcat/Vector-Pinball](https://github.com/dozingcat/Vector-Pinball/).
 - Sound, music and the original's audio code: [pdx of Twittering Machine](http://www.twittering.com).
 - Table 8 by Jack Morgan; table 10 after Spinball (GCE, 1983).
-- Vectrex version: Oliver Carell (Endprodukt), 2026.
+- VectorPie version: Oliver Carell (Endprodukt), 2026.
 
-Released under version 3 of the GPL, like the original; see [COPYING](COPYING.txt) for the license text.
+Released under version 3 of the GPL, like the original; see [COPYING](COPYING.txt) for the license text. The VectorPie
+SDK is under the MIT license.
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of

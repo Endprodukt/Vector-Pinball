@@ -1,0 +1,7 @@
+# Build
+build/
+# VectorPie SDK wird separat geklont (siehe docs/SETUP.md)
+sdk-repo/
+# Testbilder (VP_SHOT_AT, tools/shot.py)
+shot_*.txt
+shots/
